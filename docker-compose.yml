@@ -1,0 +1,27 @@
+services:
+  # Frontend - Nginx
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: always
+    networks:
+      - app-network
+
+  # Backend - Node.js API
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    restart: always
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

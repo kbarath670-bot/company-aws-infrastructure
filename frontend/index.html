@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Portfolio App</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #0a0e1a;
+            color: #e2e8f0;
+            min-height: 100vh;
+        }
+        .navbar {
+            background: #1a2035;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #2d3748;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #63b3ed;
+        }
+        .nav-links a {
+            color: #a0aec0;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #63b3ed, #76e4f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #a0aec0;
+            margin-bottom: 30px;
+        }
+        .btn {
+            background: #4299e1;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px;
+        }
+        .btn:hover { background: #3182ce; }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #4299e1;
+            color: #4299e1;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card {
+            background: #1a2035;
+            border: 1px solid #2d3748;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+        }
+        .card-icon { font-size: 40px; margin-bottom: 15px; }
+        .card h3 { color: #63b3ed; margin-bottom: 10px; }
+        .card p { color: #a0aec0; font-size: 14px; }
+        .stats {
+            background: #1a2035;
+            padding: 40px;
+            text-align: center;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .stat-item h2 {
+            font-size: 36px;
+            color: #63b3ed;
+        }
+        .stat-item p { color: #a0aec0; }
+        #api-status {
+            background: #1a2035;
+            border: 1px solid #2d3748;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 40px;
+            font-family: monospace;
+        }
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #48bb78;
+            display: inline-block;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #4a5568;
+            border-top: 1px solid #2d3748;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">🚀 DevOps Portfolio</div>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#features">Features</a>
+        <a href="#stats">Stats</a>
+        <a href="https://github.com/kbarath670-bot/company-aws-infrastructure" target="_blank">GitHub</a>
+    </div>
+</div>
+
+<div class="hero">
+    <h1>Complete DevOps Infrastructure</h1>
+    <p>Built with AWS • Docker • Kubernetes • Terraform • CI/CD</p>
+    <a href="#features" class="btn">Explore Features</a>
+    <a href="https://github.com/kbarath670-bot" class="btn btn-outline" target="_blank">View GitHub</a>
+</div>
+
+<div id="api-status">
+    <span class="status-dot"></span>
+    <span id="status-text">Checking API status...</span>
+</div>
+
+<div class="grid" id="features">
+    <div class="card">
+        <div class="card-icon">☁️</div>
+        <h3>AWS Infrastructure</h3>
+        <p>Complete VPC with public/private subnets, EC2, S3, CloudWatch monitoring</p>
+    </div>
+    <div class="card">
+        <div class="card-icon">🐳</div>
+        <h3>Docker Containers</h3>
+        <p>Containerized applications with Docker Compose for easy deployment</p>
+    </div>
+    <div class="card">
+        <div class="card-icon">☸️</div>
+        <h3>Kubernetes</h3>
+        <p>Container orchestration with auto-scaling and self-healing capabilities</p>
+    </div>
+    <div class="card">
+        <div class="card-icon">🏗️</div>
+        <h3>Terraform IaC</h3>
+        <p>Infrastructure as Code for repeatable and consistent deployments</p>
+    </div>
+    <div class="card">
+        <div class="card-icon">🔄</div>
+        <h3>CI/CD Pipeline</h3>
+        <p>Automated testing and deployment with GitHub Actions</p>
+    </div>
+    <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>Monitoring</h3>
+        <p>Real-time monitoring with CloudWatch alerts and dashboards</p>
+    </div>
+</div>
+
+<div class="stats" id="stats">
+    <h2>Project Stats</h2>
+    <div class="stats-grid">
+        <div class="stat-item">
+            <h2>10+</h2>
+            <p>AWS Services</p>
+        </div>
+        <div class="stat-item">
+            <h2>5+</h2>
+            <p>Docker Containers</p>
+        </div>
+        <div class="stat-item">
+            <h2>100%</h2>
+            <p>Automated</p>
+        </div>
+        <div class="stat-item">
+            <h2>0</h2>
+            <p>Downtime</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Built by Barath A | System Administrator → DevOps Engineer 🚀</p>
+    <p>Stack: AWS • Docker • Kubernetes • Terraform • Ansible • CI/CD</p>
+</footer>
+
+<script>
+// Fetch API status
+async function checkAPI() {
+    try {
+        const response = await fetch('/api/health');
+        const data = await response.json();
+        document.getElementById('status-text').innerHTML =
+            `API Status: ✅ Online | Server: ${data.hostname} | Time: ${data.time} | Version: ${data.version}`;
+    } catch (error) {
+        document.getElementById('status-text').innerHTML =
+            'API Status: ⚠️ Checking connection...';
+    }
+}
+checkAPI();
+setInterval(checkAPI, 30000);
+</script>
+
+</body>
+</html>
